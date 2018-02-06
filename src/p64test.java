@@ -19,11 +19,13 @@ public class p64test {
             res = new max(res,dp[i]).max();
         }
         System.out.println(res);
-        new showAarray(null,dp).show();
     }
 
     public static void main(String[] args) {
-        int[] a = {4,2,3,1,5};
-        new p64test(5,a).solve();
+        long startTime = System.currentTimeMillis();
+        int[] a = new randomArray().randomArray(1,2000,1000);
+        new p64test(1000,a).solve();
+        long startTime1 = System.currentTimeMillis();
+        System.out.println("cost:"+(startTime1-startTime));
     }
 }
